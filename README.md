@@ -55,9 +55,10 @@ are therefore the logs of the `CI` and `Publish to crates.io` workflows.
 
 - Publishing is allowed only from a GitHub Release whose `vX.Y.Z` tag matches
   `Cargo.toml`.
-- The first release uses a narrowly scoped, temporary crates.io API Token.
-- After the first release, publishing migrates to crates.io Trusted Publishing
-  with GitHub Actions OIDC and the bootstrap token is revoked.
+- The initial `0.0.0-alpha.0` release used a narrowly scoped, temporary
+  crates.io API Token.
+- All later releases use crates.io Trusted Publishing with GitHub Actions OIDC;
+  the repository does not require a long-lived publish token.
 - Registry credentials and tokens must never be committed to this repository.
 
 ## License

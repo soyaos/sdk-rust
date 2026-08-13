@@ -24,5 +24,5 @@ cargo package --locked
 
 - The Git tag must be `v<version>` and match `Cargo.toml` exactly.
 - Publish only through `.github/workflows/publish.yml`.
-- The first release uses a temporary bootstrap token; all later releases use
-  crates.io Trusted Publishing via GitHub Actions OIDC.
+- Releases use crates.io Trusted Publishing via GitHub Actions OIDC. Do not add
+  long-lived registry tokens to repository or environment secrets.

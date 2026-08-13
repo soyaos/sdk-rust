@@ -15,5 +15,5 @@ cargo package --locked
 ```
 
 Publish only through `.github/workflows/publish.yml` with a `v<version>` tag
-that exactly matches `Cargo.toml`. The first release uses a temporary bootstrap
-token; later releases must use crates.io Trusted Publishing via OIDC.
+that exactly matches `Cargo.toml`. Releases use crates.io Trusted Publishing
+via GitHub Actions OIDC; do not introduce a long-lived registry token.
